@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "المواضيع"
+    files:
+      - label: "إضافة / تعديل المواضيع"
+        name: "posts"
+        file: "content/posts.json"
+        fields:
+          - label: "المواضيع"
+            name: "items"
+            widget: "list"
+            fields:
+              - label: "عنوان الموضوع"
+                name: "title"
+                widget: "string"
+
+              - label: "وصف الموضوع"
+                name: "description"
+                widget: "text"
+
+              - label: "الصورة الكبيرة"
+                name: "image"
+                widget: "image"
+
+              - label: "لينك فيديو يوتيوب"
+                name: "youtube"
+                widget: "string"
+
+              - label: "روابط التحميل"
+                name: "links"
+                widget: "list"
+                field:
+                  label: "رابط"
+                  name: "link"
+                  widget: "string"
