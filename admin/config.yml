@@ -7,36 +7,16 @@ public_folder: "/images"
 
 collections:
   - name: "posts"
-    label: "المواضيع"
+    label: "Posts"
     files:
-      - label: "إضافة / تعديل المواضيع"
+      - file: "posts.json"
+        label: "Posts JSON"
         name: "posts"
-        file: "content/posts.json"
         fields:
-          - label: "المواضيع"
+          - label: "Items"
             name: "items"
             widget: "list"
             fields:
-              - label: "عنوان الموضوع"
-                name: "title"
-                widget: "string"
-
-              - label: "وصف الموضوع"
-                name: "description"
-                widget: "text"
-
-              - label: "الصورة الكبيرة"
-                name: "image"
-                widget: "image"
-
-              - label: "لينك فيديو يوتيوب"
-                name: "youtube"
-                widget: "string"
-
-              - label: "روابط التحميل"
-                name: "links"
-                widget: "list"
-                field:
-                  label: "رابط"
-                  name: "link"
-                  widget: "string"
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
